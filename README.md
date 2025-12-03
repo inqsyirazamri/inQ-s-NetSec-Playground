@@ -1,27 +1,43 @@
-A hands-on Network Security Lab Repository focused on practical implementations using Cisco products and open-source firewall technologies like pfSense, complemented by GNS3 and Wireshark for advanced simulation and traffic analysis. This repository serves as a personal playground for understanding security features across multiple OSI layers.
+# inQ-s-NetSec-Playground
+A continuation of "learning security my way” journey, where I focus on network security labs through the lens of OSI layers. Each lab includes a PDF or packet tracer file documenting objectives, steps, configurations, and/or observations.
 
-## **Overview**
-This repo contains configurations, simulations, and analysis files that demonstrate:
-*   **Layer 2 Security**: Port Security, STP Security, VLAN Security.
-*   **Layer 3 & 4 Security**: Standard and Extended IPv4 ACLs, Site-to-Site IPsec VPN.
-*   **Layer 7 Security**: AAA with TACACS+ and RADIUS.
-*   **Edge Security**: Cisco ASA configuration for NAT, DHCP, SSH, DMZ access.
-*   **Threat Analysis**: Packet capture and filtering using Wireshark in GNS3.
-*   **Layered Defense**: pfSense firewall with Snort IDS/IPS and rule tuning.
+*Notes:*
+* Labs cover various tools and technologies depending on the scenario—Cisco, pfSense, GNS3, Wireshark, and more.
+* Each lab demonstrates practical application of network security concepts and/or threat detection techniques.
+ 
+## Contents
 
-## **Tools Used**
-*   **Cisco Packet Tracer** – Network simulation and configuration.
-*   **GNS3 + VMware** – Advanced network emulation and integration.
-*   **Wireshark** – Packet capture and filtering for threat analysis.
-*   **pfSense + Snort** – Firewall and IDS/IPS for layered security.
+### 1. Firewall & VPN Labs
 
-## **Learning Objectives**
-*   Understand and implement security controls across OSI layers.
-*   Configure ACLs, VPNs, NAT, DHCP, and AAA for secure network design.
-*   Analyze network traffic to detect anomalies and potential attacks.
-*   Deploy layered security using firewalls and intrusion detection systems.
+| Lab                                               | Description                                                                    |
+| ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ASA Site Config – NAT_DHCP_SSH_ACL.pka            | Configured ASA as an edge device with NAT, DHCP, AAA, SSH, and DMZ access.     |
+| Implement Site-to-Site IPsec VPN.pkt              | Set up secure LAN-to-LAN VPN with IPsec encryption, ACLs, and routing.         |
+| Provision pfSense Firewall with Snort IDS_IPS.pdf | Configured pfSense firewall and integrated Snort IDS/IPS for threat detection. |
+| Snort IDS and Firewall Rule Tuning.pdf            | Tuned IDS/firewall rules, monitored alerts, and verified threat blocking.      |
 
-## **Highlights**
-*   ISP-assigned public IP space for NAT and DMZ configurations.
-*   ASA as the first line of defense for internal networks.
-*   Realistic threat detection scenarios using Wireshark and Snort.
+### 2. ACL & Security Policy Labs
+   
+| Lab                                             | Description                                                                |
+| ----------------------------------------------- | -------------------------------------------------------------------------- |
+| Implement Extended ACLs – Scenarios 1 & 2.pka   | Applied Layer 3/4 ACLs to filter traffic based on IP, protocol, and ports. |
+| Implement Named/Numbered Standard IPv4 ACLs.pka | Configured standard ACLs for IP-based traffic filtering.                   |
+| Implement VLAN Security.pka                     | Applied VLAN security to restrict unauthorized access at Layer 2.          |
+| Implement Port Security.pka                     | Configured port security to limit access on network switches.              |
+| Implement STP Security.pka                      | Secured spanning tree protocol to prevent topology attacks.                |
+| Implement AAA TACACS+ RADIUS.pkt                | Configured AAA protocols for centralized access control.                   |
+
+### 3. Routing & Network Protocol Labs
+   
+| Lab                                        | Description                                                                               |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| Implement OSPF.pkt                         | Configured OSPF routing protocol for network connectivity and path optimization.          |
+| Packet Analysis in GNS3 with Wireshark.pdf | Captured and analyzed network traffic in a virtual lab to identify anomalies and attacks. |
+
+### Extra: Reference Materials
+| Name                                                   | Description                                                          |
+| ----------------------------------------------------- | -------------------------------------------------------------------- |
+| All-in-One Digital Forensics Tutorial Compilation.pdf | eForensics Magazine 2020 reference for digital forensics techniques. |
+| Attacking Network Protocols – A Hacker Guide.pdf      | Book on network protocol capture, analysis, and exploitation.        |
+
+
